@@ -15,20 +15,22 @@ async function getData() {
 
 async function updateData() {
     let data = await getData();
-    let latitutde = '';
-    let longitude = '';
+    let lat = '';
+    let lon = '';
 
-    longitude = data.longitude;
+    lon = data.longitude;
+    lat = data.latitude;
 
-    document.getElementById('current-data').innerHTML = longitude;
+    trunc_lon = lon.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
+    trunc_lat = lat.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
+
+    document.getElementById('current-data').innerHTML = ("Longitude: " + trunc_lon + "/n Latitude: " + trunc_lat);
 } 
 
-
+var with2Decimals = num.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
+rounded.value = with2Decimals
 
 /* 
-<h4><i class="fa fa-fw fa-check"></i> 
-
-text
 
 function updateDatas() {
     var now = new Date(), // current date
