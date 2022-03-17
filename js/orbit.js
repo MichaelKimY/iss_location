@@ -24,11 +24,16 @@ async function updateData() {
     trunc_lon = lon.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
     trunc_lat = lat.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
 
-    document.getElementById('current-data').innerHTML = ("Longitude: " + trunc_lon + "/n Latitude: " + trunc_lat);
+    document.getElementById('current-data').innerHTML = `
+    Longitude: ${trunc_lon}<br>
+    Latitude: ${trunc_lat}<br>
+    `
 } 
 
 var with2Decimals = num.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
 rounded.value = with2Decimals
+
+
 
 /* 
 
