@@ -28,8 +28,6 @@ async function updateData() {
 /* 
 <h4><i class="fa fa-fw fa-check"></i> 
 
-text
-
 
 function updateDatas() {
     var now = new Date(), // current date
