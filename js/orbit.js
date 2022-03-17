@@ -1,6 +1,6 @@
 var intervalId = window.setInterval(function(){
     updateData();
-}, 2000);
+}, 1000);
 
 async function getData() {
   let url = 'https://api.wheretheiss.at/v1/satellites/25544';
