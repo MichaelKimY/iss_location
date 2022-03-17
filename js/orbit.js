@@ -37,7 +37,8 @@ rounded.value = with2Decimals
 
 /* 
 
-function updateDatas() {
+
+function updateData() {
     var now = new Date(), // current date
         months = ['January', 'February', '...']; // you get the idea
         time = now.getHours() + ':' + now.getMinutes(), // again, you get the idea
