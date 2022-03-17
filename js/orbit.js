@@ -1,8 +1,6 @@
-
-
 var intervalId = window.setInterval(function(){
     updateData();
-}, 1000);
+}, 2000);
 
 async function getData() {
   let url = 'https://api.wheretheiss.at/v1/satellites/25544';
@@ -17,16 +15,14 @@ async function getData() {
 
 async function updateData() {
     let data = await getData();
-    let latitude = '';
+    let latitutde = '';
     let longitude = '';
 
     longitude = data.longitude;
-    //latitude = data.latitude;
 
-    document.getElementById('current-iss-data').innerHTML = longitude;
-    //document.getElementById('current-iss-data').innerHTML = (longitude + "\n" + latitude);
+    document.getElementById('current-data').innerHTML = longitude;
 } 
-  
+
 
 
 /* 
@@ -55,4 +51,4 @@ updateData(); // initial call
 
 
 
-*/
+*/ 
