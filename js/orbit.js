@@ -17,7 +17,7 @@ async function getData() {
 
 async function updateData() {
     let data = await getData();
-    let latitutde = '';
+    let latitude = '';
     let longitude = '';
 
     longitude = data.longitude;
