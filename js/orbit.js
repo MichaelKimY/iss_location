@@ -21,9 +21,10 @@ async function updateData() {
     let longitude = '';
 
     longitude = data.longitude;
-    latitude = data.latitude;
+    //latitude = data.latitude;
 
-    document.getElementById('current-iss-data').innerHTML = (longitude + "\n" + latitude);
+    document.getElementById('current-iss-data').innerHTML = longitude;
+    //document.getElementById('current-iss-data').innerHTML = (longitude + "\n" + latitude);
 } 
   
 
