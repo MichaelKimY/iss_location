@@ -57,7 +57,7 @@ header.carousel {
 header.carousel .item,
 header.carousel .item.active,
 header.carousel .carousel-inner {
-    height: 50%;
+    height: 100%;
 }
 
 header.carousel .fill {
