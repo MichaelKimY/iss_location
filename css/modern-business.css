@@ -116,3 +116,8 @@ footer {
         height: 70%;
     }
 }
+
+#map {
+    height: 700px;
+    width: 100%;
+}

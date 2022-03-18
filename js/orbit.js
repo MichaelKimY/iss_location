@@ -57,6 +57,20 @@ async function updateData() {
     `
 } 
 
+function initMap() {
+  var api_key = 'AIzaSyCBfR05_zMO2fClqeZNgW_Vi6wAXUxW-Z8';
+  
+  var options = {
+    center: {lat: 38.3, lon: -0.49},
+    zoom: 8
+  }
+
+  map = new google.map.Map(document.getElementById('map'),options)
+
+
+}
+// https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=400x400&key=AIzaSyCBfR05_zMO2fClqeZNgW_Vi6wAXUxW-Z8
+
 
 
 /* 
