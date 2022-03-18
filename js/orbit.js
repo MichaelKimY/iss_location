@@ -31,8 +31,10 @@ async function updateData() {
     trunc_vel = Math.trunc(vel);
     trunc_alt = Math.trunc(alt);
 
+/*  If I want to rearrange the date/time format:
+
     // convert unix timestamp to js timestamp
-/*     var timestamp_js = new Date(unix_timestamp * 1000);
+    var timestamp_js = new Date(unix_timestamp * 1000);
     var year = timestamp_js.getFullYear();
     var month = timestamp_js.getMonth();
     var day = timestamp_js.getDate();
@@ -40,29 +42,23 @@ async function updateData() {
     var minutes = "0" + timestamp_js.getMinutes();
     var seconds = "0" + timestamp_js.getSeconds(); */
 
-    var formatTime = new Date(timestamp * 1000);
-
     // format time
     //var formattedTime = month + '/' + day + '/' + year + '/' + hours + ':' + minutes + ':' + seconds;
     
+    var formatTime = new Date(timestamp * 1000);
+
     document.getElementById('current-data').innerHTML = `
-    Longitude: ${trunc_lon}<br>
-    Latitude: ${trunc_lat}<br>
-    as of : ${formatTime}<br>
-    `
-} 
-
-
-
-/* 
-
-`
     Longitude: ${trunc_lon}<br>
     Latitude: ${trunc_lat}<br>
     Velocity: ${trunc_vel}<br>
     Altitude: ${trunc_alt}<br>
     (as of ${formatTime})<br>
     `
+} 
+
+
+
+/* 
 
 function updateData() {
     var now = new Date(), // current date
