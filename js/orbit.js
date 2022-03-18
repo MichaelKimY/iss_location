@@ -1,3 +1,18 @@
+function initMap() {
+ 
+  let map;
+  var api_key = 'AIzaSyCBfR05_zMO2fClqeZNgW_Vi6wAXUxW-Z8';
+  
+  var options = {
+    center: {lat: -34.397, lon: 150.644},
+    zoom: 8
+  }
+
+  map = new google.maps.Map(document.getElementById('map'),options)
+
+
+}
+
 var intervalId = window.setInterval(function(){
     updateData();
 }, 1000);
@@ -53,22 +68,12 @@ async function updateData() {
     Latitude: ${trunc_lat}<br>
     Velocity: ${trunc_vel} kph<br>
     Altitude: ${trunc_alt} km<br>
+    <br>
     (as of ${formatTime})<br>
     `
 } 
 
-function initMap() {
-  var api_key = 'AIzaSyCBfR05_zMO2fClqeZNgW_Vi6wAXUxW-Z8';
-  
-  var options = {
-    center: {lat: 38.3, lon: -0.49},
-    zoom: 8
-  }
 
-  map = new google.map.Map(document.getElementById('map'),options)
-
-
-}
 // https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=400x400&key=AIzaSyCBfR05_zMO2fClqeZNgW_Vi6wAXUxW-Z8
 
 

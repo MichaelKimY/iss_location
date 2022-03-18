@@ -152,17 +152,16 @@
                 </h1>
             </div>
             <!-- Insert Map -->
-            <div id="map"></div>
-            <script async
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBfR05_zMO2fClqeZNgW_Vi6wAXUxW-Z8&callback=initMap">
-            </script>
+            <div class="col-lg-1 mapContainer">
+                <div id="map"></div>
+            </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4><i class="fa fa-fw fa-check"></i>Current Location</h4>
                     </div>
                     <div class="panel-body">
-                        <p id="current-data"></p>
+                        <p id="current-data"><br><br><br><br><br><br></p>
                     </div>
                 </div>
             </div>
@@ -332,6 +331,11 @@
 
     <!-- orbit -->
     <script src="js/orbit.js"></script>
+
+    <!-- get map -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBfR05_zMO2fClqeZNgW_Vi6wAXUxW-Z8&callback=initMap">
+    </script>
 
     <!-- Script to Activate the Carousel -->
     <script>

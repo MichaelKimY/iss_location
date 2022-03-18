@@ -117,7 +117,8 @@ footer {
     }
 }
 
-#map {
-    height: 700px;
+#map{
+    height: 400px;
     width: 100%;
+    padding-bottom: 50px;
 }
