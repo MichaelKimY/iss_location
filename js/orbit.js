@@ -32,25 +32,23 @@ async function updateData() {
     trunc_alt = Math.trunc(alt);
 
     // convert unix timestamp to js timestamp
-    var timestamp_js = new Date(unix_timestamp * 1000);
+/*     var timestamp_js = new Date(unix_timestamp * 1000);
     var year = timestamp_js.getFullYear();
     var month = timestamp_js.getMonth();
     var day = timestamp_js.getDate();
     var hours = timestamp_js.getHours();
     var minutes = "0" + timestamp_js.getMinutes();
-    var seconds = "0" + timestamp_js.getSeconds();
+    var seconds = "0" + timestamp_js.getSeconds(); */
 
-    var formatTime = new Date(timestamp_js)
+    var formatTime = new Date(timestamp * 1000);
 
     // format time
-    var formattedTime = month + '/' + day + '/' + year + '/' + hours + ':' + minutes + ':' + seconds;
+    //var formattedTime = month + '/' + day + '/' + year + '/' + hours + ':' + minutes + ':' + seconds;
     
-    document.getElementById("current-data").innerHTML = `
+    document.getElementById('current-data').innerHTML = `
     Longitude: ${trunc_lon}<br>
     Latitude: ${trunc_lat}<br>
-    Velocity: ${trunc_vel}<br>
-    Altitude: ${trunc_alt}<br>
-    (as of ${formatTime})<br>
+    as of : ${formatTime}<br>
     `
 } 
 
@@ -58,6 +56,13 @@ async function updateData() {
 
 /* 
 
+`
+    Longitude: ${trunc_lon}<br>
+    Latitude: ${trunc_lat}<br>
+    Velocity: ${trunc_vel}<br>
+    Altitude: ${trunc_alt}<br>
+    (as of ${formatTime})<br>
+    `
 
 function updateData() {
     var now = new Date(), // current date
