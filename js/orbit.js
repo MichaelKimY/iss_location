@@ -28,7 +28,7 @@ async function updateData() {
     timestamp = data.timestamp;
     trunc_lon = lon.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
     trunc_lat = lat.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
-    trunc_vel = "hello";
+    trunc_vel = Math.trunc(vel);
     trunc_alt = Math.trunc(alt);
 
 /*  If I want to rearrange the date/time format:
@@ -47,11 +47,12 @@ async function updateData() {
     
     var formatTime = new Date(timestamp * 1000);
 
+    // ADD MPH CONVERSIONS
     document.getElementById('current-data').innerHTML = `
     Longitude: ${trunc_lon}<br>
     Latitude: ${trunc_lat}<br>
-    Velocity: ${trunc_vel}<br>
-    Altitude: ${trunc_alt}<br>
+    Velocity: ${trunc_vel} kph<br>
+    Altitude: ${trunc_alt} km<br>
     (as of ${formatTime})<br>
     `
 } 
