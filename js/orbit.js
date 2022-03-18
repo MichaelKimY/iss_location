@@ -28,7 +28,7 @@ async function updateData() {
     timestamp = data.timestamp;
     trunc_lon = lon.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
     trunc_lat = lat.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
-    trunc_vel = Math.trunc(vel);
+    trunc_vel = "hello";
     trunc_alt = Math.trunc(alt);
 
 /*  If I want to rearrange the date/time format:
