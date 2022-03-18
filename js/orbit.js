@@ -61,6 +61,7 @@ rounded.value = with2Decimals
 
 /* 
 
+
 function updateData() {
     var now = new Date(), // current date
         months = ['January', 'February', '...']; // you get the idea
