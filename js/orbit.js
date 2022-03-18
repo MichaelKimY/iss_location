@@ -40,6 +40,8 @@ async function updateData() {
     var minutes = "0" + timestamp_js.getMinutes();
     var seconds = "0" + timestamp_js.getSeconds();
 
+    var formatTime = new Date(timestamp_js)
+
     // format time
     var formattedTime = month + '/' + day + '/' + year + '/' + hours + ':' + minutes + ':' + seconds;
     
@@ -48,7 +50,7 @@ async function updateData() {
     Latitude: ${trunc_lat}<br>
     Velocity: ${trunc_vel}<br>
     Altitude: ${trunc_alt}<br>
-    (as of ${formattedTime})<br>
+    (as of ${formatTime})<br>
     `
 } 
 
