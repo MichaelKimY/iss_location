@@ -45,7 +45,7 @@ async function updateData() {
     // format time
     var formattedTime = month + '/' + day + '/' + year + '/' + hours + ':' + minutes + ':' + seconds;
     
-    document.getElementById('current-data').innerHTML = `
+    document.getElementById("current-data").innerHTML = `
     Longitude: ${trunc_lon}<br>
     Latitude: ${trunc_lat}<br>
     Velocity: ${trunc_vel}<br>
@@ -53,10 +53,6 @@ async function updateData() {
     (as of ${formatTime})<br>
     `
 } 
-
-var with2Decimals = num.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
-rounded.value = with2Decimals
-
 
 
 
